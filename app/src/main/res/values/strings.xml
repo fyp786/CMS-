@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CMS Portal CUI</string>
+    <string name="cms_logo_desc">CMS Logo</string>
+    <string name="back_button_desc">Back Button</string>
+</resources>
