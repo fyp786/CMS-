@@ -9,8 +9,11 @@
     <color name="white">#FFFFFFFF</color>
     <color name="colorPrimary">#003C43</color>
     <color name="colorPrimaryDark">#00332C</color>
+    <color name="blue">#007BFF</color>
     <color name="colorAccent">#00796B</color>
     <color name="SkyBlue">#B7F2E3</color>
     <color name="SkyDarkBlue">#77B0AA</color>
     <color name="DarkBlue">#23262F</color>
+    <color name="ButtonBlue">#2784E6</color>
+    <color name="ButtonWhite">#E8EEF2</color>
 </resources>

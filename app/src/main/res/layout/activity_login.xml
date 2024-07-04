@@ -60,10 +60,11 @@
         android:id="@+id/btn_sign_up"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Sign up"
+        android:text="Sign in"
         android:layout_marginTop="24dp"
-        android:backgroundTint="@color/DarkBlue"
+        android:backgroundTint="@color/ButtonBlue"
         android:textColor="@color/white"
+        android:textSize="18sp"
         android:layout_marginBottom="16dp"
         android:padding="12dp" />
 
@@ -124,8 +125,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:backgroundTint="@color/SkyBlue"
+            android:backgroundTint="@color/ButtonWhite"
             android:padding="12dp"
+            android:textSize="18sp"
             android:text="Google"
             android:textColor="@color/black" />
 
