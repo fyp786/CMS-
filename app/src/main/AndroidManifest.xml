@@ -13,6 +13,9 @@
         android:theme="@style/Theme.CMSPortalCUI"
         tools:targetApi="31">
         <activity
+            android:name=".MaintananceActivity"
+            android:exported="false" />
+        <activity
             android:name=".UserMAnagementActivity"
             android:exported="false" />
         <activity

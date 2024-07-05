@@ -16,6 +16,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_margin="16dp" />
+
     <!-- User Management Title -->
     <TextView
         android:id="@+id/tvTitle"
@@ -45,65 +46,45 @@
         app:layout_constraintTop_toBottomOf="@+id/back_button" />
 
     <!-- Tabs -->
-    <LinearLayout
+    <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabs"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etSearch">
+        app:layout_constraintTop_toBottomOf="@+id/etSearch"
+        app:tabIndicatorColor="@color/blue"
+        app:tabIndicatorHeight="4dp"
+        app:tabSelectedTextColor="@color/blue"
+        app:tabTextColor="@android:color/black">
 
-        <TextView
+        <com.google.android.material.tabs.TabItem
             android:id="@+id/tabAllUsers"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:padding="8dp"
-            android:text="All Users"
-            android:textColor="@color/black"
-            android:textSize="16sp" />
+            android:text="All Users" />
 
-        <TextView
+        <com.google.android.material.tabs.TabItem
             android:id="@+id/tabActive"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:padding="8dp"
-            android:text="Active"
-            android:textColor="@color/black"
-            android:textSize="16sp" />
+            android:text="Active" />
 
-        <TextView
+        <com.google.android.material.tabs.TabItem
             android:id="@+id/tabInactive"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:padding="8dp"
-            android:text="Inactive"
-            android:textColor="@color/black"
-            android:textSize="16sp" />
-    </LinearLayout>
+            android:text="Inactive" />
+    </com.google.android.material.tabs.TabLayout>
 
-    <!-- Indicator -->
-    <View
-        android:id="@+id/indicator"
-        android:layout_width="0dp"
-        android:layout_height="2dp"
-        android:background="@color/blue"
-        app:layout_constraintTop_toBottomOf="@+id/tabs"
-        app:layout_constraintStart_toStartOf="parent" />
     <!-- RecyclerView for User List -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvUsers"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/indicator"
+        app:layout_constraintTop_toBottomOf="@+id/tabs"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/btnAddUser" />
