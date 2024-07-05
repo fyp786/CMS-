@@ -8,17 +8,18 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class UserMAnagementActivity : AppCompatActivity() {
-    private lateinit var addUserBtn: Button
+class MaintananceDetailActivity : AppCompatActivity() {
+    private lateinit var assignBtn: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_user_management)
-        addUserBtn = findViewById(R.id.btnAddUser)
+        setContentView(R.layout.activity_maintanance_detail)
+        assignBtn = findViewById(R.id.btnAssign)
 
-        addUserBtn.setOnClickListener {
-            startActivity(Intent(this@UserMAnagementActivity, MaintananceActivity::class.java))
+        assignBtn.setOnClickListener {
+            startActivity(Intent(this@MaintananceDetailActivity, AssignWorkerActivity::class.java))
         }
+
 
     }
 }
