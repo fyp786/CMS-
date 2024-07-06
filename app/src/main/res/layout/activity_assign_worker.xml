@@ -37,6 +37,7 @@
         android:paddingStart="16dp"
         android:paddingEnd="16dp">
 
+
         <!-- Select a worker -->
         <TextView
             android:id="@+id/select_worker"

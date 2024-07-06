@@ -10,6 +10,7 @@
     <color name="colorPrimary">#003C43</color>
     <color name="colorPrimaryDark">#00332C</color>
     <color name="blue">#007BFF</color>
+    <color name="grey">#5B6065</color>
     <color name="colorAccent">#00796B</color>
     <color name="SkyBlue">#B7F2E3</color>
     <color name="SkyDarkBlue">#77B0AA</color>

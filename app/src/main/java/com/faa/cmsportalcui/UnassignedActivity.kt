@@ -3,22 +3,22 @@ package com.faa.cmsportalcui
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class AssignWorkerActivity : AppCompatActivity() {
-    private lateinit var assignBtn: Button
+class UnassignedActivity : AppCompatActivity() {
+    private lateinit var textBtn: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_assign_worker)
-        assignBtn = findViewById(R.id.assign_button)
+        setContentView(R.layout.activity_unassigned)
+        textBtn = findViewById(R.id.textView2)
 
-        assignBtn.setOnClickListener {
-            startActivity(Intent(this@AssignWorkerActivity, UnassignedActivity::class.java))
+        textBtn.setOnClickListener {
+            startActivity(Intent(this@UnassignedActivity, StaffActivity::class.java))
         }
-
     }
 }
