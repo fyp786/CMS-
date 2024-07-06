@@ -1,10 +1,10 @@
-package com.faa.cmsportalcui
+package com.faa.cmsportalcui.Authentication
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import com.faa.cmsportalcui.R
 
 class AuthenticationActivity : AppCompatActivity() {
     private lateinit var loginBtn: Button

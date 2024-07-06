@@ -1,12 +1,11 @@
-package com.faa.cmsportalcui
+package com.faa.cmsportalcui.Authentication
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import com.faa.cmsportalcui.Admin.AdminDashboardActivity
+import com.faa.cmsportalcui.R
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var googleBtn: Button
