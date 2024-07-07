@@ -43,17 +43,20 @@
     </RelativeLayout>
 
     <!-- Tabs -->
+
+    <!-- Filters -->
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabs_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/header_layout"
+        android:layout_marginTop="-2dp"
         app:tabGravity="fill"
         app:tabIndicatorColor="@color/blue"
         app:tabIndicatorHeight="4dp"
+        app:tabMode="fixed"
         app:tabSelectedTextColor="@color/blue"
-        app:tabTextColor="@android:color/black"
-        app:tabMode="fixed">
+        app:tabTextColor="@android:color/black">
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
@@ -66,7 +69,6 @@
             android:text="Closed" />
     </com.google.android.material.tabs.TabLayout>
 
-    <!-- Filters -->
     <LinearLayout
         android:id="@+id/filters_layout"
         android:layout_width="match_parent"

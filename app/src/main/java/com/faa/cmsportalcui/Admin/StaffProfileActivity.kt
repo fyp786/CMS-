@@ -9,16 +9,16 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.faa.cmsportalcui.R
 
-class StaffListActivity : AppCompatActivity() {
-    private lateinit var addstaffBtn: Button
+class StaffProfileActivity : AppCompatActivity() {
+    private lateinit var editBtn: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_staff_list)
-        addstaffBtn = findViewById(R.id.addStaffButton)
+        setContentView(R.layout.activity_staff_profile)
+        editBtn = findViewById(R.id.edit_button)
 
-        addstaffBtn.setOnClickListener {
-            startActivity(Intent(this@StaffListActivity, StaffProfileActivity::class.java))
+        editBtn.setOnClickListener {
+            startActivity(Intent(this@StaffProfileActivity, FeedbackActivity::class.java))
         }
 
     }

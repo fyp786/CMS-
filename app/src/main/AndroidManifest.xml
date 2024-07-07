@@ -13,6 +13,12 @@
         android:theme="@style/Theme.CMSPortalCUI"
         tools:targetApi="31">
         <activity
+            android:name=".Admin.FeedbackActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.StaffProfileActivity"
+            android:exported="false" />
+        <activity
             android:name=".Admin.StaffListActivity"
             android:exported="false" />
         <activity

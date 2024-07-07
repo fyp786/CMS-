@@ -80,7 +80,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:backgroundTint="@color/ButtonWhite"
-                android:text="All roles"
+                android:text="All\nroles"
                 android:textColor="@color/black"
                 android:layout_gravity="fill"
                 android:textSize="14sp" />
