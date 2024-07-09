@@ -13,6 +13,18 @@
         android:theme="@style/Theme.CMSPortalCUI"
         tools:targetApi="31">
         <activity
+            android:name=".User.UserNotificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".User.UserMaintanancerequestActivity"
+            android:exported="false" />
+        <activity
+            android:name=".User.UserRequestActivity"
+            android:exported="false" />
+        <activity
+            android:name=".User.UserDashboardActivity"
+            android:exported="false" />
+        <activity
             android:name=".Admin.FeedbackActivity"
             android:exported="false" />
         <activity

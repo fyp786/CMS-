@@ -26,4 +26,9 @@
         <item>Moderate</item>
         <item>Common</item>
     </string-array>
+    <string-array name="select_image">
+        <item>Gallery</item>
+        <item>Camera</item>
+        <item>Files</item>
+    </string-array>
 </resources>
