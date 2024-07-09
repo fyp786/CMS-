@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Back Arrow -->
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/rounded_corner_background"
+        android:src="@drawable/back"
+        android:contentDescription="@string/back_button_desc"
+        android:layout_margin="8dp" />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Settings"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <!-- ScrollView for content -->
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_above="@id/button_logout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- My Account Section -->
+            <TextView
+                android:id="@+id/my_account_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My Account"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="24dp" />
+
+            <!-- Name -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="24dp">
+                <TextView
+                    android:id="@+id/name_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_weight="1" />
+                <TextView
+                    android:id="@+id/name_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Farhan Riaz"
+                    android:textSize="16sp"
+
+                    android:layout_marginRight="16dp"/>
+            </LinearLayout>
+
+            <!-- Username -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp">
+                <TextView
+                    android:id="@+id/username_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Username"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_weight="1" />
+                <TextView
+                    android:id="@+id/username_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rfarhan"
+                    android:textSize="16sp"
+                    android:layout_marginRight="16dp"/>
+            </LinearLayout>
+
+            <!-- Birthday -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp">
+                <TextView
+                    android:id="@+id/birthday_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Birthday"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_weight="1" />
+                <TextView
+                    android:id="@+id/birthday_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="15/04/2005"
+                    android:textSize="16sp"
+                    android:layout_marginRight="16dp" />
+            </LinearLayout>
+
+            <!-- Mobile Number -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp">
+                <TextView
+                    android:id="@+id/mobile_number_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mobile Number"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_weight="1" />
+                <TextView
+                    android:id="@+id/mobile_number_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="03008074600"
+                    android:textSize="16sp"
+                    android:layout_marginRight="16dp" />
+            </LinearLayout>
+
+            <!-- Email -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp">
+                <TextView
+                    android:id="@+id/email_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="E-mail"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_weight="1" />
+                <TextView
+                    android:id="@+id/email_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="jam34646@gmail.com"
+                    android:textSize="16sp"
+                    android:layout_marginRight="16dp"/>
+            </LinearLayout>
+
+            <!-- Password -->
+            <RelativeLayout
+                android:id="@+id/password_section"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:clickable="true"
+                android:focusable="true">
+                <TextView
+                    android:id="@+id/password_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Password"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+                <ImageView
+                    android:id="@+id/password_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/arrow"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="16dp"/>
+            </RelativeLayout>
+
+            <!-- Notifications -->
+            <RelativeLayout
+                android:id="@+id/notifications_section"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="4dp"
+                android:clickable="true"
+                android:focusable="true">
+                <TextView
+                    android:id="@+id/notifications_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Notifications"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+                <ImageView
+                    android:id="@+id/notifications_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/arrow"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="16dp" />
+            </RelativeLayout>
+
+            <!-- Support Section -->
+            <TextView
+                android:id="@+id/support_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Support"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="12dp" />
+
+            <!-- I Need Help -->
+            <RelativeLayout
+                android:id="@+id/need_help_section"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="24dp"
+                android:clickable="true"
+                android:focusable="true">
+                <TextView
+                    android:id="@+id/need_help_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="I need help"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+                <ImageView
+                    android:id="@+id/need_help_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/arrow"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="16dp" />
+            </RelativeLayout>
+
+            <!-- I Have Safety Concern -->
+            <RelativeLayout
+                android:id="@+id/safety_concern_section"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="4dp"
+                android:clickable="true"
+                android:focusable="true">
+                <TextView
+                    android:id="@+id/safety_concern_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="I have safety concern"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+                <ImageView
+                    android:id="@+id/safety_concern_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/arrow"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="16dp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Logout Button -->
+    <Button
+        android:id="@+id/button_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="@color/ButtonBlue"
+        android:textColor="@android:color/white" />
+
+</RelativeLayout>

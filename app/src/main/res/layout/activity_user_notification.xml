@@ -44,7 +44,7 @@
         android:layout_height="wrap_content"
         android:text="Mark all as Read"
         android:layout_alignParentBottom="true"
-        android:backgroundTint="@color/ButtonWhite"
+        android:backgroundTint="@color/ButtonBlue"
         android:textColor="@android:color/black"
         android:layout_marginBottom="16dp"
         android:layout_marginTop="16dp" />
