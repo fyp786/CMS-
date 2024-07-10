@@ -9,16 +9,16 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.faa.cmsportalcui.R
 
-class UserSettingActivity : AppCompatActivity() {
-    private lateinit var logoutBtn: Button
+class UserFeedbackActivity : AppCompatActivity() {
+    private lateinit var submitBtn: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_user_setting)
-        logoutBtn = findViewById(R.id.button_logout)
+        setContentView(R.layout.activity_user_feedback)
+        submitBtn = findViewById(R.id.button_submit)
 
-        logoutBtn.setOnClickListener {
-            startActivity(Intent(this@UserSettingActivity, UserFeedbackActivity::class.java))
+        submitBtn.setOnClickListener {
+            startActivity(Intent(this@UserFeedbackActivity, UserHelpAndSupportActivity::class.java))
         }
 
     }
