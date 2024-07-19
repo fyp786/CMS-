@@ -65,6 +65,18 @@
         android:padding="12dp"
         android:background="@drawable/rounded_corner_background"
         android:inputType="textPassword" />
+    <!-- Confirm Password input -->
+    <EditText
+        android:id="@+id/et_confirm_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="   Confirm Password"
+        android:drawableStart="@drawable/password"
+        android:layout_marginTop="16dp"
+        android:padding="12dp"
+        android:background="@drawable/rounded_corner_background"
+        android:inputType="textPassword" />
+
 
     <!-- Sign up button -->
     <Button
@@ -98,7 +110,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="4dp"
         android:gravity="center_vertical">
 
         <View
@@ -127,7 +139,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="8dp"
         android:weightSum="2">
 
         <Button
