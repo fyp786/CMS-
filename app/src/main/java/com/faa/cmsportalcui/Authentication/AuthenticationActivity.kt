@@ -23,17 +23,20 @@ class AuthenticationActivity : AppCompatActivity() {
     private lateinit var gsc: GoogleSignInClient
     private lateinit var binding: ActivityAuthenticationBinding
     private lateinit var back_button: ImageView
-
+    private var userType: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAuthenticationBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        // Get the user type from the intent
+        userType = intent.getStringExtra("user_type")
+
         back_button = findViewById(R.id.back_button)
         back_button.setOnClickListener {
             startActivity(Intent(this@AuthenticationActivity, WelcomeActivity::class.java))
         }
-
 
         mAuth = FirebaseAuth.getInstance()
 
@@ -64,25 +67,32 @@ class AuthenticationActivity : AppCompatActivity() {
             }
         }
     }
-
     private fun navigateToNextActivity() {
-        val userType = intent.getStringExtra("user_type")
         val intent = if (userType == "admin") {
             Intent(this, AdminDashboardActivity::class.java)
-        } else {
+        } else if (userType == "user") {
             Intent(this, UserDashboardActivity::class.java)
+        } else {
+            Toast.makeText(this, "User type not recognized", Toast.LENGTH_SHORT).show()
+            return
         }
+        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
         startActivity(intent)
         finish()
     }
 
+
     private fun navigateToLogin() {
-        val intent = Intent(this, LoginActivity::class.java)
+        val intent = Intent(this, LoginActivity::class.java).apply {
+            putExtra("user_type", userType)
+        }
         startActivity(intent)
     }
 
     private fun navigateToSignUp() {
-        val intent = Intent(this, SignUpActivity::class.java)
+        val intent = Intent(this, SignUpActivity::class.java).apply {
+            putExtra("user_type", userType)
+        }
         startActivity(intent)
     }
 }

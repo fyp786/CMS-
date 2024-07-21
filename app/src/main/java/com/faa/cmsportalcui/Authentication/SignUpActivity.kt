@@ -12,10 +12,10 @@ import androidx.appcompat.app.AppCompatActivity
 import com.faa.cmsportalcui.Admin.AdminDashboardActivity
 import com.faa.cmsportalcui.R
 import com.faa.cmsportalcui.User.UserDashboardActivity
-import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.firestore.FirebaseFirestore
 
 class SignUpActivity : AppCompatActivity() {
     private lateinit var alreadyHaveAccount: TextView
@@ -28,9 +28,14 @@ class SignUpActivity : AppCompatActivity() {
     private lateinit var progressDialog: ProgressDialog
     private lateinit var mAuth: FirebaseAuth
     private var mUser: FirebaseUser? = null
+    private var userType: String? = null
+    private lateinit var firestore: FirebaseFirestore
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
+
+        userType = intent.getStringExtra("user_type")
 
         alreadyHaveAccount = findViewById(R.id.tv_sign_in)
         inputEmail = findViewById(R.id.et_email)
@@ -38,9 +43,10 @@ class SignUpActivity : AppCompatActivity() {
         inputConfirmPassword = findViewById(R.id.et_confirm_password)
         inputUsername = findViewById(R.id.et_username)
         btnRegister = findViewById(R.id.btn_sign_up)
-        back_button = findViewById(R.id.back_button) // Initialize the back_button property
+        back_button = findViewById(R.id.back_button)
         progressDialog = ProgressDialog(this)
         mAuth = FirebaseAuth.getInstance()
+        firestore = FirebaseFirestore.getInstance()
         mUser = mAuth.currentUser
 
         back_button.setOnClickListener {
@@ -55,7 +61,6 @@ class SignUpActivity : AppCompatActivity() {
             performAuth()
         }
     }
-
 
     private fun performAuth() {
         val username = inputUsername.text.toString()
@@ -77,24 +82,43 @@ class SignUpActivity : AppCompatActivity() {
             progressDialog.setCanceledOnTouchOutside(false)
             progressDialog.show()
 
-            mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(OnCompleteListener<AuthResult> { task ->
+            mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener { task ->
                 if (task.isSuccessful) {
-                    progressDialog.dismiss()
-                    sendUserToNextActivity()
-                    Toast.makeText(this@SignUpActivity, "Registration Successful", Toast.LENGTH_SHORT).show()
+                    saveUserData()
                 } else {
                     progressDialog.dismiss()
-                    Toast.makeText(this@SignUpActivity, task.exception?.message ?: "Registration Failed", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        this@SignUpActivity,
+                        task.exception?.message ?: "Registration Failed",
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
-            })
+            }
         }
     }
 
-    private fun sendUserToNextActivity() {
-        val intent: Intent
-        val email = inputEmail.text.toString()
+    private fun saveUserData() {
+        val currentUser = mAuth.currentUser ?: return
+        val userRef = firestore.collection("users").document(currentUser.uid)
 
-        intent = if (email.contains("admin")) {
+        val userMap = mapOf(
+            "username" to inputUsername.text.toString(),
+            "userType" to userType
+        )
+
+        userRef.set(userMap)
+            .addOnSuccessListener {
+                progressDialog.dismiss()
+                sendUserToNextActivity()
+                Toast.makeText(this@SignUpActivity, "Registration Successful", Toast.LENGTH_SHORT).show()
+            }
+            .addOnFailureListener {
+                progressDialog.dismiss()
+                Toast.makeText(this@SignUpActivity, "Failed to Save User Data", Toast.LENGTH_SHORT).show()
+            }
+    }
+    private fun sendUserToNextActivity() {
+        val intent = if (userType == "admin") {
             Intent(this@SignUpActivity, AdminDashboardActivity::class.java)
         } else {
             Intent(this@SignUpActivity, UserDashboardActivity::class.java)
@@ -102,5 +126,7 @@ class SignUpActivity : AppCompatActivity() {
 
         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
         startActivity(intent)
+        finish()
     }
+
 }
