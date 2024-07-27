@@ -15,7 +15,7 @@ class StaffActivity : AppCompatActivity() {
         textBtn = findViewById(R.id.tvTitle)
 
         textBtn.setOnClickListener {
-            startActivity(Intent(this@StaffActivity, ReportActivity::class.java))
+            startActivity(Intent(this@StaffActivity, MaintananceStaffDetailsActivity::class.java))
         }
     }
 }

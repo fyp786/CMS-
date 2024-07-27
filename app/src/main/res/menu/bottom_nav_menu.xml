@@ -7,9 +7,9 @@
         android:title="Home" />
 
     <item
-        android:id="@+id/calendar"
-        android:icon="@drawable/calendar_ic"
-        android:title="Calendar" />
+        android:id="@+id/user"
+        android:icon="@drawable/user"
+        android:title="User" />
 
     <item
         android:id="@+id/staff"

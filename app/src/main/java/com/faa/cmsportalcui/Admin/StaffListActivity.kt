@@ -15,7 +15,7 @@ class StaffListActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_staff_list)
-        addstaffBtn = findViewById(R.id.addStaffButton)
+        addstaffBtn = findViewById(R.id.allRolesButton)
 
         addstaffBtn.setOnClickListener {
             startActivity(Intent(this@StaffListActivity, StaffProfileActivity::class.java))
