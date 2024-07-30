@@ -17,8 +17,8 @@
         android:title="Setting" />
 
     <item
-        android:id="@+id/more"
-        android:icon="@drawable/more"
-        android:title="More" />
+        android:id="@+id/profile"
+        android:icon="@drawable/profile"
+        android:title="Profile" />
 
 </menu>

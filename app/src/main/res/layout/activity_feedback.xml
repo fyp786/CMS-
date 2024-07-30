@@ -22,8 +22,7 @@
             android:layout_margin="16dp"
             android:background="@drawable/rounded_corner_background"
             android:contentDescription="@string/back_button_desc"
-            android:src="@drawable/back"
-            android:tint="@android:color/black" />
+            android:src="@drawable/back" />
 
         <TextView
             android:id="@+id/screen_name"

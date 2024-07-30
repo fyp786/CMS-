@@ -42,13 +42,6 @@
                     android:textStyle="bold"
                     android:paddingStart="16dp" />
 
-                <ImageButton
-                    android:id="@+id/search_button"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:background="?attr/selectableItemBackgroundBorderless"
-                    android:src="@drawable/search_ic"
-                    android:contentDescription="@string/search_button_desc" />
             </LinearLayout>
 
         </androidx.appcompat.widget.Toolbar>

@@ -31,7 +31,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/title"
-        android:layout_above="@id/button_logout">
+        android:layout_above="@id/button_edit">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -68,7 +68,6 @@
                     android:layout_height="wrap_content"
                     android:text="Farhan Riaz"
                     android:textSize="16sp"
-
                     android:layout_marginRight="16dp"/>
             </LinearLayout>
 
@@ -272,7 +271,20 @@
         </LinearLayout>
     </ScrollView>
 
+    <!-- Edit Button -->
+
     <!-- Logout Button -->
+    <Button
+        android:id="@+id/button_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/button_logout"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="51dp"
+        android:backgroundTint="@color/ButtonBlue"
+        android:text="Edit"
+        android:textColor="@android:color/white" />
+
     <Button
         android:id="@+id/button_logout"
         android:layout_width="match_parent"
