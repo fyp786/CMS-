@@ -32,20 +32,22 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Search Bar -->
+
+    <!-- Tabs -->
     <EditText
         android:id="@+id/etSearch"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/search_background"
+        android:drawableStart="@drawable/search_ic"
         android:hint="Search by name, role, email"
         android:padding="8dp"
-        android:drawableStart="@drawable/search_ic"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/back_button" />
 
-    <!-- Tabs -->
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabs"
         android:layout_width="0dp"
