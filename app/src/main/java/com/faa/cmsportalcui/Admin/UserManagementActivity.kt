@@ -25,7 +25,7 @@ class UserManagementActivity : AppCompatActivity() {
         binding.rvUsers.adapter = userAdapter
 
 
-        // Fetch users
+
         fetchUsers()
     }
 
