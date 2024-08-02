@@ -20,7 +20,6 @@ class UserManagementActivity : AppCompatActivity() {
         binding = ActivityUserManagementBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Set up RecyclerView
         binding.rvUsers.layoutManager = LinearLayoutManager(this)
         userAdapter = UserAdapter(users)
         binding.rvUsers.adapter = userAdapter
