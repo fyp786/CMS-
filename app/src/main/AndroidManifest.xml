@@ -16,6 +16,9 @@
         android:theme="@style/Theme.CMSPortalCUI"
         tools:targetApi="31">
         <activity
+            android:name=".Admin.UserManagementActivity"
+            android:exported="false" />
+        <activity
             android:name=".Admin.AddNotificationActivity"
             android:exported="false" />
         <activity
@@ -98,9 +101,6 @@
             android:exported="false" />
         <activity
             android:name=".Admin.MaintananceActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Admin.UserMAnagementActivity"
             android:exported="false" />
         <activity
             android:name=".Admin.AdminDashboardActivity"

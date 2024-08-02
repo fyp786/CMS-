@@ -10,7 +10,6 @@
         android:id="@+id/imgProfile"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:src="@drawable/farhan"
         android:contentDescription="Profile Image"
         android:layout_marginEnd="16dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,11 +33,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Admin"
-        android:textColor="@color/grey"
+        android:textColor="@android:color/darker_gray"
         android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@+id/imgProfile"
         app:layout_constraintTop_toBottomOf="@+id/tvName" />
-
-    <!-- Edit Button -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

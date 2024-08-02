@@ -39,7 +39,7 @@ class AdminDashboardActivity : AppCompatActivity(), NavigationView.OnNavigationI
         }
 
         findViewById<LinearLayout>(R.id.totaluser).setOnClickListener {
-            startActivity(Intent(this@AdminDashboardActivity, UserMAnagementActivity::class.java))
+            startActivity(Intent(this@AdminDashboardActivity, UserManagementActivity::class.java))
         }
         findViewById<LinearLayout>(R.id.pendingrequest).setOnClickListener {
             startActivity(Intent(this@AdminDashboardActivity, MaintananceActivity::class.java))
@@ -104,7 +104,7 @@ class AdminDashboardActivity : AppCompatActivity(), NavigationView.OnNavigationI
                 startActivity(Intent(this, AdminDashboardActivity::class.java))
             }
             R.id.user -> {
-                startActivity(Intent(this, UserMAnagementActivity::class.java))
+                startActivity(Intent(this, UserManagementActivity::class.java))
             }
             R.id.staff -> {
                 startActivity(Intent(this, StaffActivity::class.java))
