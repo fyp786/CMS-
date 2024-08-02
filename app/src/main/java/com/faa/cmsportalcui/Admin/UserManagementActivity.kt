@@ -43,7 +43,6 @@ class UserManagementActivity : AppCompatActivity() {
                 userAdapter.notifyDataSetChanged()
             }
             .addOnFailureListener { exception ->
-                // Handle error
             }
     }
 }
