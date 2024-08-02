@@ -30,15 +30,6 @@
                     android:gravity="center_vertical"
                     android:layout_marginBottom="16dp">
 
-                    <ImageButton
-                        android:id="@+id/back_button"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:background="@drawable/rounded_corner_background"
-                        android:src="@drawable/back"
-                        android:contentDescription="@string/back_button_desc"
-                        android:layout_margin="16dp" />
-
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -69,6 +60,7 @@
 
                     <!-- Total Users -->
                     <LinearLayout
+                        android:id="@+id/totaluser"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_margin="8dp"
@@ -96,6 +88,7 @@
 
                     <!-- Pending Requests -->
                     <LinearLayout
+                        android:id="@+id/pendingrequest"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_margin="8dp"
@@ -123,6 +116,7 @@
 
                     <!-- Completed Tasks -->
                     <LinearLayout
+                        android:id="@+id/completetask"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_margin="8dp"
@@ -150,6 +144,7 @@
 
                     <!-- Active Workers -->
                     <LinearLayout
+                        android:id="@+id/activeworker"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_margin="8dp"
@@ -200,11 +195,11 @@
                     android:gravity="center">
 
                     <Button
-                        android:id="@+id/btn_add_user"
+                        android:id="@+id/btn_add_staff"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Add User"
+                        android:text="Add Staff"
                         android:backgroundTint="@color/ButtonBlue"
                         android:textColor="@android:color/white"
                         android:textSize="18sp"
@@ -253,6 +248,5 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        app:headerLayout="@layout/nav_header_admin_dashboard"
         app:menu="@menu/nav_menu_admin" />
 </androidx.drawerlayout.widget.DrawerLayout>
